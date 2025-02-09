@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <title>To Do List App</title>
+  </head>
+  <body>
+    <!-- Create A Div Fellow Container in this div Cretae 2 div -->
+    <div class="todo-container">
+      <div class="add-task">
+        <input type="text" placeholder="Enter Name Your Project" required />
+        <span class="plus">+</span>
+      </div>
+      <div class="tasks-content">
+        <span class="no-Task-message">No Tasks To Show .....</span>
+        <!-- <span class="task-box"></span> -->
+      </div>
+    </div>
+    <!-- Parent -->
+    <div class="tasks-stats">
+
+    <div class="tasks-completed">Completed <span>0</span></div>
+
+      <div class="tasks-count">Tasks <span>0</span></div>
+    </div>
+    
+    <div class="btn">
+      <div class="delete-all">Delete All</div>
+      <div class="finish-all">Finish All</div>
+    </div>
+
+    
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
