@@ -7,14 +7,6 @@ let tasksCompleted = document.querySelector(".tasks-completed span");
 let tasksCount = document.querySelector(".tasks-count span");
 let btnDelete = document.querySelector(".delete-all")
 
-// Set local Storage
-
-
-
-
-
-
-// Get
 // Foucs On Input Field
 
 window.onload = function () {
@@ -28,7 +20,6 @@ theAddButton.onclick = function () {
 
   // Step_1 Check if in put is empty 'We Use State If'
 
-
   if (theInput.value === "") {   //=== "Empty"
 
     Swal.fire({
@@ -36,11 +27,8 @@ theAddButton.onclick = function () {
         title: "Oops...",
         text: "Empty Field... wrong!",
       });
-
   } 
-  
   else {
-
     // Show A Message Create a var 
 
     let noTaskMessage = document.querySelector(".tasks-content .no-Task-message");
@@ -51,9 +39,7 @@ theAddButton.onclick = function () {
 
     // Remove No Tasks Message
     noTaskMessage.remove("Ahmed");    
-
     }
-
     // Create Main Span Element
     let mainSpan = document.createElement("span");
 
@@ -89,18 +75,6 @@ theAddButton.onclick = function () {
     // Add the Task To the container
 
     tasksContainer.appendChild(mainSpan);
-
-
-    // Local Storage
-
-
-    window.localStorage.setItem('Task Name' , JSON.stringify(text))
-
-    
-    console.log((window.localStorage.setItem('Task Name' , text)))
- 
-    
-
     }
 
     // Empty The Input
@@ -159,33 +133,17 @@ function createNoTasks() {
   // append The Message Span Element To The Task Container
 
   tasksContainer.appendChild(msgSpan);
-  
-
-  // Check 
-  
-
-
 }
-
-
 
 // Function to calculate Task
 
 function calcTasks(){
 
     // Calculate All Tasks
-
     tasksCount.innerHTML = document.querySelectorAll(".tasks-content .task-box").length;
-
     // Calculate Completed Tasks
-
     tasksCompleted.innerHTML = document.querySelectorAll(".tasks-content .finished").length;
-
   }
-
-
-
-
   // Delete All Tasks 
   document.querySelector(".delete-all").onclick = function () {
     let myArrayAllTask = Array.from(document.querySelectorAll(".task-box"));
@@ -196,9 +154,7 @@ function calcTasks(){
     createNoTasks() 
     theInput.focus();
   };
-
 // Finish All Tasks
-
 let finishedDone = document.querySelector(".finish-all");
 finishedDone.onclick = function () {
   let ArrayTasksDone = Array.from(document.querySelectorAll(".task-box"));
